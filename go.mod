@@ -1,3 +1,3 @@
-module go-mail
+module github.com/intaen/go-mail
 
 go 1.15
