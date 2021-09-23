@@ -2,12 +2,12 @@
 
 Simple library to check if email format is valid. Email service provider that can be check here is gmail, outlook, and hotmail. It's format adjust from their term&condition.
 ### Gmail
-* Minimal 6 chars
+* Minimal 6 chars, maximum 30 chars
 * Can't use two or more period '.'
 * Can't contains special characters such as `~!#$%^&*()+=:;"'\?<>{}[]
 
 ### Outlook/Hotmail
-* There's no minimal chars
+* There's no minimal chars, maximum local-part 64 chars, maximum domain 255 chars
 * Can use '.', '-', '_'
 * Can't contains special character such as `~!#$%^&*()+=:;"'\?<>{}[]
 
@@ -38,12 +38,12 @@ import (
 
 func main() {
 	email := "testing.gomail@gmail.com"
-	isValid, localpart, domain := IsEmailValid(email)
+	isValid := IsEmailValid(email)
 	if isValid {
-		obfemail := ObfuscateEmail(localpart, domain)
+		obfemail := ObfuscateEmail(email)
 		fmt.Println(obfemail)
 	}
-	// Result: true, testing.gomail, gmail
+	// Result: true
     	// Result: te***********l@gmail.com
 }
 ```
