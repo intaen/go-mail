@@ -44,6 +44,6 @@ func main() {
 		fmt.Println(obfemail)
 	}
 	// Result: true
-    	// Result: te***********l@gmail.com
+    // Result: te***********l@gmail.com
 }
 ```
