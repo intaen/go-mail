@@ -11,7 +11,7 @@ Simple library to check if email format is valid. Email service provider that ca
 * Can use '.', '-', '_'
 * Can't contains special character such as `~!#$%^&*()+=:;"'\?<>{}[]
 
-Here, youcan obfuscate email with asterisk, so it'll be hidden.
+Here, you can obfuscate email with asterisk, so it'll be hidden.
 
 ## Installation
 
