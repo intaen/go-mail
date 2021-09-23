@@ -1,4 +1,4 @@
-# go-main
+# go-mail
 
 Simple library to check if email format is valid. You can obfuscate email with asterisk, so it'll be hidden.
 
@@ -29,10 +29,10 @@ func main() {
 	email := "testing.gomail@gmail.com"
 	isValid, localpart, domain := IsEmailValid(email)
 	if isValid {
-		email = ObfuscateEmail(localpart, domain)
-		fmt.Println(email)
+		obfemail := ObfuscateEmail(localpart, domain)
+		fmt.Println(obfemail)
 	}
 	// Result: true, testing.gomail, gmail
-    // Result: te***********l@gmail.com
+    	// Result: te***********l@gmail.com
 }
 ```
