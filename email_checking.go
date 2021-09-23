@@ -65,13 +65,13 @@ func GetEmailProvider(domain string) string {
 func CheckDomain(domain string) error {
 	// Check if data has '.' more than one
 	if strings.Count(domain, ".") > 1 {
-		return errors.New("Domain contains '.' (period) more than one")
+		return errors.New("domain contains '.' (period) more than one")
 	}
 
 	// Check if data has special character in it
 	spchars := strings.Join(SpecialChars, "")
 	if strings.ContainsAny(domain, spchars+"-_") {
-		return errors.New("Domain contains special characters " + spchars + "-_")
+		return errors.New("domain contains special characters " + spchars + "-_")
 	}
 
 	return nil
@@ -85,19 +85,19 @@ func CheckLocalPart(localpart, provdr string) error {
 
 		// Check length of local part
 		if len(localpart) < 5 {
-			return errors.New("Local-part is less than 5 chars")
+			return errors.New("local-part is less than 5 chars")
 		}
 
 		// Check if data has '.' more than one
 		if strings.Count(localpart, ".") > 1 {
-			return errors.New("Local-part contains '.' (period) more than one")
+			return errors.New("local-part contains '.' (period) more than one")
 		}
 	}
 
 	// Check if data has special character in it
 	spchars := strings.Join(SpecialChars, "")
 	if strings.ContainsAny(localpart, spchars) {
-		return errors.New("Local-part contains special characters " + spchars)
+		return errors.New("local-part contains special characters " + spchars)
 	}
 
 	return nil
