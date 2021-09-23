@@ -1,6 +1,16 @@
 # go-mail
 
-Simple library to check if email format is valid. You can obfuscate email with asterisk, so it'll be hidden.
+Simple library to check if email format is valid. Email service provider that can be check here is gmail, outlook, and hotmail. It's format adjust from their term&condition.
+### Gmail
+* Minimal 6 chars
+* Can't use two or more period '.'
+* Can't contains special characters such as `~!#$%^&*()+=:;"'\?<>{}[]
+
+### Outlook/Hotmail
+* There's no minimal chars
+* Can use '.', '-', '_'
+* Can't contains special character such as `~!#$%^&*()+=:;"'\?<>{}[]
+Here, youcan obfuscate email with asterisk, so it'll be hidden.
 
 ## Installation
 
